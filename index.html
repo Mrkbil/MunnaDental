@@ -1,0 +1,795 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dr. Mehedi Rafiq Munna | Premier Dental Excellence</title>
+    <meta
+      name="description"
+      content="Advanced dental care in Dhaka by Dr. Mehedi Rafiq Munna. Specializing in painless, modern, and aesthetic dentistry."
+    />
+
+    <!-- Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Tailwind Config -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Plus Jakarta Sans"', "sans-serif"],
+            },
+            colors: {
+              dental: {
+                50: "#f0fdfa",
+                100: "#ccfbf1",
+                200: "#99f6e4",
+                300: "#5eead4",
+                400: "#2dd4bf",
+                500: "#14b8a6",
+                600: "#0d9488",
+                700: "#0f766e",
+                800: "#115e59",
+                900: "#134e4a",
+              },
+              slate: {
+                950: "#020617",
+              },
+            },
+            animation: {
+              blob: "blob 10s infinite",
+              float: "float 6s ease-in-out infinite",
+            },
+            keyframes: {
+              blob: {
+                "0%": { transform: "translate(0px, 0px) scale(1)" },
+                "33%": { transform: "translate(30px, -45px) scale(1.05)" },
+                "66%": { transform: "translate(-25px, 25px) scale(0.95)" },
+                "100%": { transform: "translate(0px, 0px) scale(1)" },
+              },
+              float: {
+                "0%, 100%": { transform: "translateY(0)" },
+                "50%": { transform: "translateY(-15px)" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      .glass {
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.4);
+      }
+      .text-gradient {
+        background: linear-gradient(135deg, #0d9488 0%, #2dd4bf 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      /* Rescaled Section Padding: 20% Reduction */
+      .section-padding {
+        padding-top: 5.5rem;
+        padding-bottom: 5.5rem;
+      }
+      @media (min-width: 1024px) {
+        .section-padding {
+          padding-top: 7.5rem;
+          padding-bottom: 7.5rem;
+        }
+      }
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f8fafc;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 10px;
+        border: 2px solid #f8fafc;
+      }
+    </style>
+  </head>
+
+  <body
+    class="bg-[#FAFAFA] text-slate-900 antialiased selection:bg-dental-100 selection:text-dental-900"
+  >
+    <!-- HEADER / NAV (Maintained Size) -->
+    <nav
+      class="fixed top-0 w-full z-50 transition-all duration-500 px-6 lg:px-12 pt-6"
+      id="navbar"
+    >
+      <div
+        class="max-w-[1300px] mx-auto glass rounded-[2rem] px-8 py-4 flex justify-between items-center shadow-2xl shadow-slate-200/50"
+      >
+        <a href="index.html" class="flex items-center gap-3 group">
+          <div
+            class="w-11 h-11 bg-gradient-to-tr from-dental-600 to-dental-400 rounded-2xl flex items-center justify-center text-white shadow-lg group-hover:rotate-6 transition-transform"
+          >
+            <i class="ph ph-tooth text-2xl"></i>
+          </div>
+          <div class="leading-none">
+            <span
+              class="block font-extrabold text-xl tracking-tighter text-slate-950"
+              >MunnaDental</span
+            >
+            <span
+              class="text-[10px] uppercase tracking-[0.2em] font-bold text-dental-600"
+              >Premium Care</span
+            >
+          </div>
+        </a>
+
+        <div class="hidden lg:flex items-center gap-9">
+          <a
+            href="index.html"
+            class="text-sm font-semibold text-slate-600 hover:text-dental-600 transition-colors"
+            >Home</a
+          >
+          <a
+            href="about.html"
+            class="text-sm font-semibold text-slate-600 hover:text-dental-600 transition-colors"
+            >About</a
+          >
+          <a
+            href="services.html"
+            class="text-sm font-semibold text-slate-600 hover:text-dental-600 transition-colors"
+            >Treatments</a
+          >
+          <a
+            href="blog.html"
+            class="text-sm font-semibold text-slate-600 hover:text-dental-600 transition-colors"
+            >Stories</a
+          >
+        </div>
+
+        <div class="hidden lg:flex items-center gap-7">
+          <a
+            href="tel:+8801700000000"
+            class="flex items-center gap-2 text-slate-700 hover:text-dental-600 font-bold text-sm transition-all"
+          >
+            <i class="ph-bold ph-phone text-lg"></i>
+            <span>+880 17XX XXXXXX</span>
+          </a>
+          <a
+            href="contact.html"
+            class="bg-slate-950 hover:bg-dental-600 text-white px-6 py-3 rounded-full text-sm font-bold transition-all transform hover:-translate-y-1 shadow-lg"
+          >
+            Book Appointment
+          </a>
+        </div>
+
+        <button
+          class="lg:hidden text-2xl p-2"
+          onclick="
+            document
+              .getElementById('mobileMenu')
+              .classList.toggle('translate-x-full')
+          "
+        >
+          <i class="ph ph-list-bold"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- MOBILE MENU -->
+    <div
+      id="mobileMenu"
+      class="fixed inset-0 bg-white z-[70] transform translate-x-full transition-transform duration-500 flex flex-col p-10 lg:hidden"
+    >
+      <div class="flex justify-between items-center mb-16">
+        <span class="font-black text-2xl tracking-tighter">NAVIGATION</span>
+        <button
+          onclick="
+            document
+              .getElementById('mobileMenu')
+              .classList.toggle('translate-x-full')
+          "
+          class="text-3xl"
+        >
+          <i class="ph ph-x"></i>
+        </button>
+      </div>
+      <nav class="flex flex-col gap-8">
+        <a
+          href="index.html"
+          class="text-3xl font-bold"
+          onclick="toggleMobileMenu()"
+          >Home</a
+        >
+        <a
+          href="services.html"
+          class="text-3xl font-bold"
+          onclick="toggleMobileMenu()"
+          >Services</a
+        >
+        <a
+          href="about.html"
+          class="text-3xl font-bold"
+          onclick="toggleMobileMenu()"
+          >Biography</a
+        >
+        <a
+          href="contact.html"
+          class="text-3xl font-bold text-dental-600"
+          onclick="toggleMobileMenu()"
+          >Book Now</a
+        >
+      </nav>
+    </div>
+
+    <!-- HERO SECTION (Rescaled) -->
+    <section
+      id="home"
+      class="relative min-h-screen flex items-center overflow-hidden bg-white px-6 lg:px-12 pt-16"
+    >
+      <div class="absolute inset-0 pointer-events-none">
+        <div
+          class="absolute top-[0%] left-[-5%] w-[400px] h-[400px] bg-dental-50 rounded-full mix-blend-multiply filter blur-[80px] opacity-70 animate-blob"
+        ></div>
+        <div
+          class="absolute bottom-[0%] right-[5%] w-[350px] h-[350px] bg-blue-50 rounded-full mix-blend-multiply filter blur-[80px] opacity-70 animate-blob animation-delay-4000"
+        ></div>
+      </div>
+
+      <div
+        class="max-w-[1300px] mx-auto w-full grid grid-cols-1 lg:grid-cols-12 items-center gap-12 lg:gap-16 relative z-10"
+      >
+        <div class="lg:col-span-7 flex flex-col items-start space-y-7">
+          <div
+            class="inline-flex items-center gap-2 bg-white border border-slate-100 rounded-full px-4 py-1.5 shadow-sm"
+          >
+            <span
+              class="flex h-2 w-2 rounded-full bg-dental-500 animate-pulse"
+            ></span>
+            <span
+              class="text-[10px] font-black uppercase tracking-widest text-slate-500"
+              >World-Class Dental Standards</span
+            >
+          </div>
+
+          <!-- Font sizes reduced ~15% -->
+          <h1
+            class="text-5xl lg:text-[4.75rem] font-black text-slate-950 leading-[1.05] tracking-tight"
+          >
+            Artistry in <br />
+            <span class="text-gradient">Every Smile.</span>
+          </h1>
+
+          <p
+            class="text-base lg:text-lg text-slate-500 max-w-lg leading-relaxed"
+          >
+            I am
+            <span class="text-slate-900 font-bold">Dr. Mehedi Rafiq Munna</span
+            >. We bridge the gap between clinical precision and a spa-like
+            experience. No judgment, just healthy, radiant smiles.
+          </p>
+
+          <div class="flex flex-wrap gap-4">
+            <a
+              href="contact.html"
+              class="px-8 py-4 bg-slate-950 text-white rounded-xl font-bold text-base hover:bg-dental-600 transition-all shadow-xl shadow-slate-200 transform hover:-translate-y-1"
+            >
+              Start Your Journey
+            </a>
+            <a
+              href="services.html"
+              class="px-8 py-4 bg-white border border-slate-200 text-slate-900 rounded-xl font-bold text-base hover:border-dental-300 transition-all flex items-center gap-2"
+            >
+              View Services <i class="ph-bold ph-arrow-right"></i>
+            </a>
+          </div>
+
+          <div
+            class="flex flex-col sm:flex-row items-start sm:items-center gap-6 pt-4"
+          >
+            <div class="flex -space-x-3">
+              <img
+                src="https://i.pravatar.cc/100?img=11"
+                class="w-11 h-11 rounded-full border-2 border-white shadow-md"
+                alt="User"
+              />
+              <img
+                src="https://i.pravatar.cc/100?img=12"
+                class="w-11 h-11 rounded-full border-2 border-white shadow-md"
+                alt="User"
+              />
+              <img
+                src="https://i.pravatar.cc/100?img=13"
+                class="w-11 h-11 rounded-full border-2 border-white shadow-md"
+                alt="User"
+              />
+              <div
+                class="w-11 h-11 rounded-full border-2 border-white bg-dental-500 flex items-center justify-center text-white font-bold text-[10px] shadow-md"
+              >
+                99+
+              </div>
+            </div>
+            <div>
+              <div class="flex text-amber-400 text-xs mb-0.5">
+                <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i
+                ><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i
+                ><i class="ph-fill ph-star"></i>
+              </div>
+              <p class="text-xs font-bold text-slate-800 tracking-tight">
+                2,500+ Procedures Completed
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 relative">
+          <!-- Image height reduced from 5/4 to 4/5 or scaled slightly smaller -->
+          <div
+            class="relative w-full aspect-[1/1.2] lg:aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-2xl group max-w-md mx-auto"
+          >
+            <img
+              src="assets/images/dr.jpeg"
+              class="w-full h-full object-cover mt-[10px] grayscale-[20%] group-hover:grayscale-0 transition-all duration-700"
+              alt="Dr. Mehedi Rafiq Munna"
+            />
+
+            <div
+              class="absolute bottom-6 left-6 right-6 glass p-5 rounded-2xl animate-float"
+            >
+              <div class="flex items-center gap-3">
+                <div
+                  class="w-10 h-10 bg-dental-500 rounded-xl flex items-center justify-center text-white text-lg"
+                >
+                  <i class="ph-fill ph-certificate"></i>
+                </div>
+                <div>
+                  <h4
+                    class="font-black text-sm text-slate-900 leading-none mb-1"
+                  >
+                    BDS, Sapporo
+                  </h4>
+                  <p
+                    class="text-[10px] font-bold text-dental-700 uppercase tracking-tighter"
+                  >
+                    Excellence Certified
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES SECTION (Scaled Grid) -->
+    <section id="services" class="section-padding bg-slate-50 px-6 lg:px-12">
+      <div class="max-w-[1300px] mx-auto">
+        <div
+          class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12"
+        >
+          <div class="max-w-xl">
+            <span
+              class="text-dental-600 font-black uppercase tracking-[0.2em] text-[10px]"
+              >Services</span
+            >
+            <h2
+              class="text-3xl lg:text-5xl font-black text-slate-900 mt-2 leading-tight"
+            >
+              Elite Care for <br />Your Dental Health
+            </h2>
+          </div>
+          <p class="text-slate-500 max-w-xs text-base leading-relaxed mb-1">
+            Utilizing modern Japanese and Western technologies for pain-free
+            treatment.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-5 lg:gap-6">
+          <!-- Main Bento Card -->
+          <div
+            class="md:col-span-8 bg-white p-8 lg:p-10 rounded-[2.5rem] shadow-sm hover:shadow-lg transition-all border border-slate-100 group"
+          >
+            <div class="flex flex-col h-full justify-between gap-8">
+              <div
+                class="w-16 h-16 bg-dental-50 text-dental-600 rounded-2xl flex items-center justify-center text-3xl group-hover:bg-dental-600 group-hover:text-white transition-all duration-500"
+              >
+                <i class="ph-fill ph-sparkle"></i>
+              </div>
+              <div>
+                <h3
+                  class="text-2xl lg:text-3xl font-black text-slate-900 mb-3 tracking-tighter"
+                >
+                  Cosmetic Smile Design
+                </h3>
+                <p class="text-slate-500 text-base max-w-lg mb-6">
+                  Precision-crafted veneers, whitening, and alignment. We design
+                  smiles that fit your face perfectly.
+                </p>
+                <a
+                  href="contact.html"
+                  class="inline-flex items-center gap-2 font-bold text-sm text-dental-600 group-hover:gap-4 transition-all"
+                  >Consultation <i class="ph-bold ph-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Emergency Card -->
+          <div
+            class="md:col-span-4 bg-slate-950 p-8 rounded-[2.5rem] text-white flex flex-col justify-between group overflow-hidden relative"
+          >
+            <div
+              class="absolute top-0 right-0 w-24 h-24 bg-dental-500/20 rounded-full -mr-12 -mt-12 blur-2xl"
+            ></div>
+            <div class="relative z-10">
+              <div
+                class="w-14 h-14 bg-white/10 rounded-xl flex items-center justify-center text-2xl mb-6 text-dental-400"
+              >
+                <i class="ph-fill ph-first-aid"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-2 tracking-tight">
+                Emergency Care
+              </h3>
+              <p class="text-slate-400 text-sm leading-relaxed">
+                Immediate attention for toothaches or broken crowns. We
+                prioritize your relief.
+              </p>
+            </div>
+            <div class="mt-8 relative z-10">
+              <span
+                class="block text-[10px] uppercase tracking-widest text-slate-500 mb-1"
+                >24/7 Support</span
+              >
+              <span class="text-lg font-bold text-dental-400"
+                >+880 17XX XXXXXX</span
+              >
+            </div>
+          </div>
+
+          <!-- Small Cards -->
+          <div
+            class="md:col-span-4 bg-white p-8 rounded-[2.25rem] shadow-sm border border-slate-100"
+          >
+            <div
+              class="w-14 h-14 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center text-2xl mb-6"
+            >
+              <i class="ph-fill ph-shield-check"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-2">Preventive</h3>
+            <p class="text-slate-500 text-sm leading-relaxed">
+              Scaling and laser checkups to ensure longevity of natural teeth.
+            </p>
+          </div>
+
+          <div
+            class="md:col-span-4 bg-white p-8 rounded-[2.25rem] shadow-sm border border-slate-100"
+          >
+            <div
+              class="w-14 h-14 bg-purple-50 text-purple-600 rounded-xl flex items-center justify-center text-2xl mb-6"
+            >
+              <i class="ph-fill ph-activity"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-2">Root Canal</h3>
+            <p class="text-slate-500 text-sm leading-relaxed">
+              Modern endodontics using pain-free techniques and precision files.
+            </p>
+          </div>
+
+          <div
+            class="md:col-span-4 bg-dental-500 p-8 rounded-[2.25rem] shadow-lg text-white"
+          >
+            <div
+              class="w-14 h-14 bg-white/20 rounded-xl flex items-center justify-center text-2xl mb-6"
+            >
+              <i class="ph-fill ph-smiley"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Pediatric</h3>
+            <p class="text-dental-50 text-sm leading-relaxed">
+              A gentle environment to make sure your children love visiting the
+              dentist.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION (Rescaled) -->
+    <section id="about" class="section-padding bg-white px-6 lg:px-12">
+      <div
+        class="max-w-[1300px] mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-14"
+      >
+        <div class="relative">
+          <div
+            class="absolute inset-0 bg-dental-100 rounded-[3rem] -rotate-2 scale-95"
+          ></div>
+          <img
+            src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=1200"
+            class="relative rounded-[3rem] shadow-2xl w-full h-[450px] lg:h-[500px] object-cover"
+            alt="The Clinic"
+          />
+          <div
+            class="absolute -bottom-8 -right-4 lg:-right-6 glass p-7 rounded-[2rem] shadow-2xl max-w-[280px] hidden sm:block"
+          >
+            <i
+              class="ph ph-quotes-fill text-4xl text-dental-500 mb-2 opacity-30"
+            ></i>
+            <p
+              class="text-base font-medium text-slate-800 italic leading-relaxed"
+            >
+              "My mission is to eliminate dental anxiety through technology."
+            </p>
+            <div class="mt-4 flex items-center gap-2">
+              <div class="w-8 h-[2px] bg-dental-500"></div>
+              <span
+                class="text-[10px] font-black uppercase tracking-widest text-slate-400"
+                >Dr. Munna</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="space-y-7">
+          <div>
+            <span
+              class="text-dental-600 font-black uppercase tracking-[0.2em] text-[10px]"
+              >The Professional</span
+            >
+            <h2
+              class="text-3xl lg:text-5xl font-black text-slate-900 mt-2 leading-tight"
+            >
+              Precision Meets Passion.
+            </h2>
+          </div>
+          <div class="space-y-4 text-base text-slate-500 leading-relaxed">
+            <p>
+              After completing my BDS from
+              <strong class="text-slate-900">Sapporo Dental College</strong>, I
+              dedicated my career to mastering the "Pain-Free" approach.
+            </p>
+            <p>
+              I believe dentistry is 50% medical science and 50% emotional
+              intelligence. We focus on your comfort and long-term well-being.
+            </p>
+          </div>
+          <div class="grid grid-cols-2 gap-6">
+            <div class="space-y-1">
+              <span class="text-3xl font-black text-dental-600">05+</span>
+              <p
+                class="text-[10px] font-bold text-slate-900 uppercase tracking-widest"
+              >
+                Years Experience
+              </p>
+            </div>
+            <div class="space-y-1">
+              <span class="text-3xl font-black text-dental-600">3k+</span>
+              <p
+                class="text-[10px] font-bold text-slate-900 uppercase tracking-widest"
+              >
+                Successful Cases
+              </p>
+            </div>
+          </div>
+          <div class="pt-4">
+            <a
+              href="about.html"
+              class="inline-flex items-center gap-3 text-base font-black text-slate-900 group"
+            >
+              Detailed Clinical Profile
+              <span
+                class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center group-hover:bg-dental-600 group-hover:text-white transition-all"
+              >
+                <i class="ph-bold ph-arrow-right text-sm"></i>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CALL TO ACTION (Scaled) -->
+    <section id="contact" class="section-padding px-6 lg:px-12">
+      <div class="max-w-[1300px] mx-auto">
+        <div
+          class="bg-slate-950 rounded-[3rem] p-10 lg:p-16 relative overflow-hidden"
+        >
+          <div
+            class="absolute top-0 left-0 w-72 h-72 bg-dental-600 rounded-full blur-[120px] opacity-20 -translate-x-1/2 -translate-y-1/2"
+          ></div>
+          <div class="relative z-10 text-center max-w-3xl mx-auto space-y-7">
+            <h2
+              class="text-4xl lg:text-5xl font-black text-white leading-tight tracking-tighter"
+            >
+              Ready to redesign <br />your smile?
+            </h2>
+            <p class="text-slate-400 text-base lg:text-lg">
+              Book your private consultation today. We offer flexible hours in
+              Uttara to fit your busy schedule.
+            </p>
+            <div
+              class="flex flex-col sm:flex-row justify-center items-center gap-4"
+            >
+              <a
+                href="contact.html"
+                class="w-full sm:w-auto px-10 py-5 bg-dental-500 hover:bg-dental-400 text-white font-black rounded-2xl transition-all shadow-xl flex items-center justify-center gap-3 text-base"
+              >
+                <i class="ph-fill ph-phone-call"></i> Call for Booking
+              </a>
+              <a
+                href="contact.html"
+                class="w-full sm:w-auto px-10 py-5 bg-white/5 hover:bg-white/10 text-white font-black rounded-2xl border border-white/10 transition-all text-base backdrop-blur-md"
+              >
+                Messenger Appointment
+              </a>
+            </div>
+            <p
+              class="text-slate-500 font-bold uppercase tracking-[0.3em] text-[10px] pt-2"
+            >
+              Location: Sector 11, Uttara, Dhaka
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer
+      class="bg-black pt-20 pb-10 px-6 lg:px-12 border-t border-slate-800"
+    >
+      <div class="max-w-[1300px] mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
+          <!-- Brand Section -->
+          <div class="md:col-span-5 space-y-6">
+            <a href="index.html" class="flex items-center gap-3">
+              <div
+                class="w-9 h-9 bg-dental-600 rounded-xl flex items-center justify-center text-white"
+              >
+                <i class="ph ph-tooth-bold text-lg"></i>
+              </div>
+              <span
+                class="font-black text-xl tracking-tighter text-white uppercase"
+              >
+                MunnaDental
+              </span>
+            </a>
+
+            <p class="text-slate-400 text-base leading-relaxed max-w-xs">
+              Providing premium dental solutions with Japanese clinical
+              excellence in the heart of Dhaka.
+            </p>
+
+            <div class="flex gap-3">
+              <a
+                href="#"
+                class="w-10 h-10 rounded-full border border-slate-700 flex items-center justify-center text-slate-400 hover:text-white hover:bg-dental-600 transition-all text-lg"
+              >
+                <i class="ph-fill ph-facebook-logo"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 rounded-full border border-slate-700 flex items-center justify-center text-slate-400 hover:text-white hover:bg-dental-600 transition-all text-lg"
+              >
+                <i class="ph-fill ph-instagram-logo"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 rounded-full border border-slate-700 flex items-center justify-center text-slate-400 hover:text-white hover:bg-dental-600 transition-all text-lg"
+              >
+                <i class="ph-fill ph-linkedin-logo"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Practice -->
+          <div class="md:col-span-2 space-y-4">
+            <h4
+              class="font-black text-white uppercase tracking-widest text-[10px]"
+            >
+              Practice
+            </h4>
+            <ul class="space-y-3 text-sm text-slate-400 font-semibold">
+              <li>
+                <a href="services.html" class="hover:text-dental-500"
+                  >Treatments</a
+                >
+              </li>
+              <li>
+                <a href="about.html" class="hover:text-dental-500"
+                  >The Clinic</a
+                >
+              </li>
+              <li>
+                <a href="about.html" class="hover:text-dental-500"
+                  >Our Doctor</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Support -->
+          <div class="md:col-span-2 space-y-4">
+            <h4
+              class="font-black text-white uppercase tracking-widest text-[10px]"
+            >
+              Support
+            </h4>
+            <ul class="space-y-3 text-sm text-slate-400 font-semibold">
+              <li>
+                <a href="contact.html" class="hover:text-dental-500"
+                  >Emergency</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-dental-500">Privacy Policy</a>
+              </li>
+              <li>
+                <a href="contact.html" class="hover:text-dental-500">Contact</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Clinic Hours -->
+          <div class="md:col-span-3 space-y-4">
+            <h4
+              class="font-black text-white uppercase tracking-widest text-[10px]"
+            >
+              Clinic Hours
+            </h4>
+            <div class="space-y-2 text-sm text-slate-400 font-semibold">
+              <div class="flex justify-between border-b border-slate-800 pb-1">
+                <span>Sat - Thu</span>
+                <span class="text-white">4:00 PM - 10:00 PM</span>
+              </div>
+              <div class="flex justify-between">
+                <span>Friday</span>
+                <span class="text-dental-500">By Appointment</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div
+          class="pt-10 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4"
+        >
+          <p
+            class="text-slate-500 font-bold text-[10px] uppercase tracking-widest"
+          >
+            &copy; 2026 Dr. Mehedi Rafiq Munna. Excellence in Dentistry.
+          </p>
+          <p class="text-slate-600 text-[9px] uppercase tracking-tighter">
+            Designed for Modern Healthcare Standards
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const navbar = document.getElementById("navbar");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 30) {
+          navbar.classList.add("pt-2");
+          navbar.classList.remove("pt-6");
+        } else {
+          navbar.classList.add("pt-6");
+          navbar.classList.remove("pt-2");
+        }
+      });
+      function toggleMobileMenu() {
+        document
+          .getElementById("mobileMenu")
+          .classList.toggle("translate-x-full");
+      }
+    </script>
+  </body>
+</html>

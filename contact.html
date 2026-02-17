@@ -1,0 +1,588 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact & Appointments | MunnaDental Excellence</title>
+    <meta
+      name="description"
+      content="Book an appointment with Dr. Mehedi Rafiq Munna in Uttara, Dhaka. Call, message, or fill in the form. We respond fast!"
+    />
+    <!-- Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Tailwind Config -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Plus Jakarta Sans"', "sans-serif"],
+            },
+            colors: {
+              dental: {
+                50: "#f0fdfa",
+                100: "#ccfbf1",
+                200: "#99f6e4",
+                300: "#5eead4",
+                400: "#2dd4bf",
+                500: "#14b8a6",
+                600: "#0d9488",
+                700: "#0f766e",
+                800: "#115e59",
+                900: "#134e4a",
+              },
+              slate: {
+                950: "#020617",
+              },
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      .glass {
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.4);
+      }
+      .text-gradient {
+        background: linear-gradient(135deg, #0d9488 0%, #2dd4bf 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .section-padding {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+      }
+      @media (min-width: 1024px) {
+        .section-padding {
+          padding-top: 6.5rem;
+          padding-bottom: 6.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body
+    class="bg-[#FAFAFA] text-slate-900 antialiased selection:bg-dental-100 selection:text-dental-900"
+  >
+    <!-- HEADER / NAV (UNTOUCHED) -->
+    <nav
+      class="fixed top-0 w-full z-50 transition-all duration-500 px-6 lg:px-12 pt-6"
+      id="navbar"
+    >
+      <div
+        class="max-w-[1300px] mx-auto glass rounded-[2rem] px-8 py-4 flex justify-between items-center shadow-2xl shadow-slate-200/50"
+      >
+        <a href="index.html" class="flex items-center gap-3 group">
+          <div
+            class="w-11 h-11 bg-gradient-to-tr from-dental-600 to-dental-400 rounded-2xl flex items-center justify-center text-white shadow-lg group-hover:rotate-6 transition-transform"
+          >
+            <i class="ph ph-tooth text-2xl"></i>
+          </div>
+          <div class="leading-none">
+            <span
+              class="block font-extrabold text-xl tracking-tighter text-slate-950"
+              >MunnaDental</span
+            >
+            <span
+              class="text-[10px] uppercase tracking-[0.2em] font-bold text-dental-600"
+              >Premium Care</span
+            >
+          </div>
+        </a>
+
+        <div class="hidden lg:flex items-center gap-9">
+          <a
+            href="index.html"
+            class="text-sm font-semibold text-slate-600 hover:text-dental-600 transition-colors"
+            >Home</a
+          >
+          <a
+            href="about.html"
+            class="text-sm font-semibold text-slate-600 hover:text-dental-600 transition-colors"
+            >About</a
+          >
+          <a
+            href="services.html"
+            class="text-sm font-semibold text-slate-600 hover:text-dental-600 transition-colors"
+            >Treatments</a
+          >
+          <a
+            href="blog.html"
+            class="text-sm font-semibold text-slate-600 hover:text-dental-600 transition-colors"
+            >Stories</a
+          >
+        </div>
+
+        <div class="hidden lg:flex items-center gap-7">
+          <a
+            href="tel:+8801700000000"
+            class="flex items-center gap-2 text-slate-700 hover:text-dental-600 font-bold text-sm transition-all"
+          >
+            <i class="ph-bold ph-phone text-lg"></i>
+            <span>+880 17XX XXXXXX</span>
+          </a>
+          <a
+            href="contact.html"
+            class="bg-slate-950 hover:bg-dental-600 text-white px-6 py-3 rounded-full text-sm font-bold transition-all transform hover:-translate-y-1 shadow-lg"
+          >
+            Book Appointment
+          </a>
+        </div>
+
+        <button class="lg:hidden text-2xl p-2" onclick="toggleMobileMenu()">
+          <i class="ph ph-list-bold"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- MOBILE MENU -->
+    <div
+      id="mobileMenu"
+      class="fixed inset-0 bg-white z-[70] transform translate-x-full transition-transform duration-500 flex flex-col p-10 lg:hidden"
+    >
+      <div class="flex justify-between items-center mb-16">
+        <span class="font-black text-2xl tracking-tighter">NAVIGATION</span>
+        <button onclick="toggleMobileMenu()" class="text-3xl">
+          <i class="ph ph-x"></i>
+        </button>
+      </div>
+      <nav class="flex flex-col gap-8">
+        <a href="index.html" class="text-3xl font-bold">Home</a>
+        <a href="services.html" class="text-3xl font-bold">Services</a>
+        <a href="about.html" class="text-3xl font-bold">Biography</a>
+        <a href="contact.html" class="text-3xl font-bold text-dental-600"
+          >Book Now</a
+        >
+      </nav>
+    </div>
+
+    <!-- PAGE HERO (Reduced Padding & Background Tint) -->
+    <section
+      class="pt-32 pb-12 bg-gradient-to-b from-dental-50 to-[#FAFAFA] border-b border-dental-100"
+    >
+      <div
+        class="max-w-[1300px] mx-auto px-6 lg:px-12 text-center lg:text-left"
+      >
+        <span
+          class="text-dental-600 font-black uppercase tracking-[0.3em] text-[10px] bg-white px-4 py-1.5 rounded-full border border-dental-100 shadow-sm"
+          >Fast Response</span
+        >
+        <h1
+          class="text-4xl lg:text-5xl font-black text-slate-950 mt-5 leading-tight tracking-tight"
+        >
+          Let's Talk <span class="text-gradient">Teeth.</span>
+        </h1>
+        <div
+          class="mt-5 flex justify-center lg:justify-start items-center gap-3 text-xs font-bold text-slate-400"
+        >
+          <a href="index.html" class="hover:text-dental-600">Home</a>
+          <i class="ph-bold ph-caret-right text-[10px]"></i>
+          <span class="text-slate-900">Contact & Appointments</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAIN CONTACT SECTION -->
+    <section class="section-padding bg-white">
+      <div class="max-w-[1300px] mx-auto px-6 lg:px-12">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+          <!-- Appointment Form -->
+          <div
+            class="lg:col-span-7 bg-slate-50 p-8 lg:p-10 rounded-[2.5rem] border border-slate-100 shadow-sm"
+          >
+            <h2 class="text-2xl font-black text-slate-950 mb-2">
+              Request an Appointment
+            </h2>
+            <p class="text-slate-500 text-sm mb-8">
+              Fill in the details below. Our team will call you back within 2-4
+              hours to confirm.
+            </p>
+
+            <form
+              onsubmit="
+                event.preventDefault();
+                document
+                  .getElementById('success-msg')
+                  .classList.remove('hidden');
+              "
+              class="space-y-5"
+            >
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <div class="space-y-2">
+                  <label
+                    class="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1"
+                    >First Name</label
+                  >
+                  <input
+                    type="text"
+                    placeholder="Mehedi"
+                    class="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-dental-500 outline-none transition-all"
+                    required
+                  />
+                </div>
+                <div class="space-y-2">
+                  <label
+                    class="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1"
+                    >Phone Number</label
+                  >
+                  <input
+                    type="tel"
+                    placeholder="+880 17XX XXXXXX"
+                    class="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-dental-500 outline-none transition-all"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <div class="space-y-2">
+                  <label
+                    class="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1"
+                    >Select Service</label
+                  >
+                  <select
+                    class="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-dental-500 outline-none transition-all"
+                  >
+                    <option>Pick a service</option>
+                    <option>Cosmetic Dentistry ✨</option>
+                    <option>Dental Implants 🦷</option>
+                    <option>Root Canal Therapy 😅</option>
+                    <option>Check-up & Cleaning 👀</option>
+                    <option>Emergency Care 🚨</option>
+                  </select>
+                </div>
+                <div class="space-y-2">
+                  <label
+                    class="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1"
+                    >Preferred Date</label
+                  >
+                  <input
+                    type="date"
+                    class="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-dental-500 outline-none transition-all"
+                  />
+                </div>
+              </div>
+
+              <div class="space-y-2">
+                <label
+                  class="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1"
+                  >Short Message (Optional)</label
+                >
+                <textarea
+                  rows="3"
+                  placeholder="Tell us about your dental concern..."
+                  class="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-dental-500 outline-none transition-all"
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="w-full bg-slate-950 text-white font-black py-4 rounded-xl hover:bg-dental-600 transition-all shadow-xl shadow-slate-200 flex items-center justify-center gap-3"
+              >
+                <i class="ph-bold ph-paper-plane-tilt"></i>
+                Send Booking Request
+              </button>
+            </form>
+
+            <div
+              id="success-msg"
+              class="hidden mt-6 p-4 bg-dental-50 border border-dental-200 rounded-2xl flex items-center gap-4 animate-float"
+            >
+              <div
+                class="w-10 h-10 bg-dental-500 text-white rounded-full flex items-center justify-center"
+              >
+                <i class="ph-bold ph-check"></i>
+              </div>
+              <div>
+                <h4 class="text-sm font-bold text-slate-900">
+                  Request Sent Successfully!
+                </h4>
+                <p class="text-xs text-dental-600">
+                  We'll call you back very shortly.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Sidebar -->
+          <div class="lg:col-span-5 space-y-6">
+            <h2 class="text-2xl font-black text-slate-950 mb-6">
+              Or Connect Directly
+            </h2>
+
+            <div class="grid grid-cols-1 gap-4">
+              <!-- Phone -->
+              <a
+                href="tel:+8801700000000"
+                class="flex items-center gap-5 p-5 bg-white border border-slate-100 rounded-3xl hover:border-dental-300 hover:shadow-lg transition-all group"
+              >
+                <div
+                  class="w-12 h-12 bg-dental-50 text-dental-600 rounded-2xl flex items-center justify-center text-2xl group-hover:bg-dental-600 group-hover:text-white transition-all"
+                >
+                  <i class="ph-fill ph-phone-call"></i>
+                </div>
+                <div>
+                  <p
+                    class="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-0.5"
+                  >
+                    Phone / WhatsApp
+                  </p>
+                  <p class="text-base font-bold text-slate-900">
+                    +880 17XX-XXXXXX
+                  </p>
+                </div>
+              </a>
+
+              <!-- Email -->
+              <div
+                class="flex items-center gap-5 p-5 bg-white border border-slate-100 rounded-3xl hover:border-dental-300 hover:shadow-lg transition-all group"
+              >
+                <div
+                  class="w-12 h-12 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center text-2xl group-hover:bg-blue-600 group-hover:text-white transition-all"
+                >
+                  <i class="ph-fill ph-envelope"></i>
+                </div>
+                <div>
+                  <p
+                    class="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-0.5"
+                  >
+                    Email Support
+                  </p>
+                  <p class="text-base font-bold text-slate-900">
+                    hello@munnadental.com
+                  </p>
+                </div>
+              </div>
+
+              <!-- Location -->
+              <div
+                class="flex items-center gap-5 p-5 bg-white border border-slate-100 rounded-3xl hover:border-dental-300 hover:shadow-lg transition-all group"
+              >
+                <div
+                  class="w-12 h-12 bg-purple-50 text-purple-600 rounded-2xl flex items-center justify-center text-2xl group-hover:bg-purple-600 group-hover:text-white transition-all"
+                >
+                  <i class="ph-fill ph-map-pin"></i>
+                </div>
+                <div>
+                  <p
+                    class="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-0.5"
+                  >
+                    Practice Location
+                  </p>
+                  <p class="text-base font-bold text-slate-900">
+                    Sector 11, Uttara, Dhaka
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Map Embed -->
+            <div
+              class="relative w-full h-[230px] rounded-[2.5rem] overflow-hidden border border-slate-100 shadow-sm"
+            >
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3648.423!2d90.39!3d23.87!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c5d05f73e077%3A0xf6e8dcad8a89ec2e!2sUttara%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1671234567890!5m2!1sen!2sbd"
+                class="absolute inset-0 w-full h-full grayscale-[30%] contrast-[1.1]"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+              >
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAYMENT METHODS (Modern Badge Style) -->
+    <section class="section-padding bg-dental-50/50 border-y border-dental-100">
+      <div class="max-w-[1300px] mx-auto px-6 lg:px-12">
+        <div class="text-center mb-10">
+          <h2 class="text-2xl font-black text-slate-950">
+            Secure Payment Options 💳
+          </h2>
+          <p class="text-slate-500 text-sm mt-2">
+            Flexible methods to ensure your care is accessible.
+          </p>
+        </div>
+        <div class="flex flex-wrap justify-center gap-3">
+          <span
+            class="px-6 py-3 bg-white border border-slate-200 rounded-full font-bold text-slate-700 text-sm shadow-sm flex items-center gap-2"
+          >
+            <i class="ph-fill ph-money text-green-600"></i> Cash
+          </span>
+          <span
+            class="px-6 py-3 bg-white border border-slate-200 rounded-full font-bold text-slate-700 text-sm shadow-sm flex items-center gap-2"
+          >
+            <i class="ph-fill ph-device-mobile text-rose-500"></i> bKash / Nagad
+          </span>
+          <span
+            class="px-6 py-3 bg-white border border-slate-200 rounded-full font-bold text-slate-700 text-sm shadow-sm flex items-center gap-2"
+          >
+            <i class="ph-fill ph-credit-card text-blue-600"></i> Card Payment
+          </span>
+          <span
+            class="px-6 py-3 bg-white border border-slate-200 rounded-full font-bold text-slate-700 text-sm shadow-sm flex items-center gap-2"
+          >
+            <i class="ph-fill ph-calendar-check text-purple-600"></i>
+            Installments (EMI)
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER (UNTOUCHED) -->
+    <footer
+      class="bg-black pt-20 pb-10 px-6 lg:px-12 border-t border-slate-800"
+    >
+      <div class="max-w-[1300px] mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
+          <div class="md:col-span-5 space-y-6">
+            <a href="index.html" class="flex items-center gap-3">
+              <div
+                class="w-9 h-9 bg-dental-600 rounded-xl flex items-center justify-center text-white"
+              >
+                <i class="ph ph-tooth-bold text-lg"></i>
+              </div>
+              <span
+                class="font-black text-xl tracking-tighter text-white uppercase"
+              >
+                MunnaDental
+              </span>
+            </a>
+            <p class="text-slate-400 text-base leading-relaxed max-w-xs">
+              Providing premium dental solutions with Japanese clinical
+              excellence in the heart of Dhaka.
+            </p>
+            <div class="flex gap-3">
+              <a
+                href="#"
+                class="w-10 h-10 rounded-full border border-slate-700 flex items-center justify-center text-slate-400 hover:text-white hover:bg-dental-600 transition-all text-lg"
+              >
+                <i class="ph-fill ph-facebook-logo"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 rounded-full border border-slate-700 flex items-center justify-center text-slate-400 hover:text-white hover:bg-dental-600 transition-all text-lg"
+              >
+                <i class="ph-fill ph-instagram-logo"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 rounded-full border border-slate-700 flex items-center justify-center text-slate-400 hover:text-white hover:bg-dental-600 transition-all text-lg"
+              >
+                <i class="ph-fill ph-linkedin-logo"></i>
+              </a>
+            </div>
+          </div>
+          <div class="md:col-span-2 space-y-4">
+            <h4
+              class="font-black text-white uppercase tracking-widest text-[10px]"
+            >
+              Practice
+            </h4>
+            <ul class="space-y-3 text-sm text-slate-400 font-semibold">
+              <li>
+                <a href="services.html" class="hover:text-dental-500"
+                  >Treatments</a
+                >
+              </li>
+              <li>
+                <a href="about.html" class="hover:text-dental-500"
+                  >The Clinic</a
+                >
+              </li>
+              <li>
+                <a href="about.html" class="hover:text-dental-500"
+                  >Our Doctor</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="md:col-span-2 space-y-4">
+            <h4
+              class="font-black text-white uppercase tracking-widest text-[10px]"
+            >
+              Support
+            </h4>
+            <ul class="space-y-3 text-sm text-slate-400 font-semibold">
+              <li>
+                <a href="contact.html" class="hover:text-dental-500"
+                  >Emergency</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-dental-500">Privacy Policy</a>
+              </li>
+              <li>
+                <a href="contact.html" class="hover:text-dental-500">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <div class="md:col-span-3 space-y-4">
+            <h4
+              class="font-black text-white uppercase tracking-widest text-[10px]"
+            >
+              Clinic Hours
+            </h4>
+            <div class="space-y-2 text-sm text-slate-400 font-semibold">
+              <div class="flex justify-between border-b border-slate-800 pb-1">
+                <span>Sat - Thu</span>
+                <span class="text-white">4:00 PM - 10:00 PM</span>
+              </div>
+              <div class="flex justify-between">
+                <span>Friday</span>
+                <span class="text-dental-500">By Appointment</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="pt-10 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4"
+        >
+          <p
+            class="text-slate-500 font-bold text-[10px] uppercase tracking-widest"
+          >
+            &copy; 2026 Dr. Mehedi Rafiq Munna. Excellence in Dentistry.
+          </p>
+          <p class="text-slate-600 text-[9px] uppercase tracking-tighter">
+            Designed for Modern Healthcare Standards
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const navbar = document.getElementById("navbar");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 30) {
+          navbar.classList.add("pt-2");
+          navbar.classList.remove("pt-6");
+        } else {
+          navbar.classList.add("pt-6");
+          navbar.classList.remove("pt-2");
+        }
+      });
+      function toggleMobileMenu() {
+        document
+          .getElementById("mobileMenu")
+          .classList.toggle("translate-x-full");
+      }
+    </script>
+  </body>
+</html>

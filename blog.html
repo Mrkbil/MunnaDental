@@ -1,0 +1,627 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stories & Insights | MunnaDental</title>
+    <meta
+      name="description"
+      content="Dental tips, oral health insights, and clinical stories from Dr. Mehedi Rafiq Munna in Dhaka."
+    />
+    <!-- Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Tailwind Config -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Plus Jakarta Sans"', "sans-serif"],
+            },
+            colors: {
+              dental: {
+                50: "#f0fdfa",
+                100: "#ccfbf1",
+                200: "#99f6e4",
+                300: "#5eead4",
+                400: "#2dd4bf",
+                500: "#14b8a6",
+                600: "#0d9488",
+                700: "#0f766e",
+                800: "#115e59",
+                900: "#134e4a",
+              },
+              slate: {
+                950: "#020617",
+              },
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      .glass {
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.4);
+      }
+      .text-gradient {
+        background: linear-gradient(135deg, #0d9488 0%, #2dd4bf 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .section-padding {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+      }
+      @media (min-width: 1024px) {
+        .section-padding {
+          padding-top: 6.5rem;
+          padding-bottom: 6.5rem;
+        }
+      }
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-[#FAFAFA] text-slate-900 antialiased selection:bg-dental-100 selection:text-dental-900"
+  >
+    <!-- HEADER / NAV (UNTOUCHED) -->
+    <nav
+      class="fixed top-0 w-full z-50 transition-all duration-500 px-6 lg:px-12 pt-6"
+      id="navbar"
+    >
+      <div
+        class="max-w-[1300px] mx-auto glass rounded-[2rem] px-8 py-4 flex justify-between items-center shadow-2xl shadow-slate-200/50"
+      >
+        <a href="index.html" class="flex items-center gap-3 group">
+          <div
+            class="w-11 h-11 bg-gradient-to-tr from-dental-600 to-dental-400 rounded-2xl flex items-center justify-center text-white shadow-lg group-hover:rotate-6 transition-transform"
+          >
+            <i class="ph ph-tooth text-2xl"></i>
+          </div>
+          <div class="leading-none">
+            <span
+              class="block font-extrabold text-xl tracking-tighter text-slate-950"
+              >MunnaDental</span
+            >
+            <span
+              class="text-[10px] uppercase tracking-[0.2em] font-bold text-dental-600"
+              >Premium Care</span
+            >
+          </div>
+        </a>
+
+        <div class="hidden lg:flex items-center gap-9">
+          <a
+            href="index.html"
+            class="text-sm font-semibold text-slate-600 hover:text-dental-600 transition-colors"
+            >Home</a
+          >
+          <a
+            href="about.html"
+            class="text-sm font-semibold text-slate-600 hover:text-dental-600 transition-colors"
+            >About</a
+          >
+          <a
+            href="services.html"
+            class="text-sm font-semibold text-slate-600 hover:text-dental-600 transition-colors"
+            >Treatments</a
+          >
+          <a href="blog.html" class="text-sm font-semibold text-dental-600"
+            >Stories</a
+          >
+        </div>
+
+        <div class="hidden lg:flex items-center gap-7">
+          <a
+            href="tel:+8801700000000"
+            class="flex items-center gap-2 text-slate-700 hover:text-dental-600 font-bold text-sm transition-all"
+          >
+            <i class="ph-bold ph-phone text-lg"></i>
+            <span>+880 17XX XXXXXX</span>
+          </a>
+          <a
+            href="contact.html"
+            class="bg-slate-950 hover:bg-dental-600 text-white px-6 py-3 rounded-full text-sm font-bold transition-all transform hover:-translate-y-1 shadow-lg"
+          >
+            Book Appointment
+          </a>
+        </div>
+
+        <button class="lg:hidden text-2xl p-2" onclick="toggleMobileMenu()">
+          <i class="ph ph-list-bold"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- MOBILE MENU -->
+    <div
+      id="mobileMenu"
+      class="fixed inset-0 bg-white z-[70] transform translate-x-full transition-transform duration-500 flex flex-col p-10 lg:hidden"
+    >
+      <div class="flex justify-between items-center mb-16">
+        <span class="font-black text-2xl tracking-tighter">NAVIGATION</span>
+        <button onclick="toggleMobileMenu()" class="text-3xl">
+          <i class="ph ph-x"></i>
+        </button>
+      </div>
+      <nav class="flex flex-col gap-8">
+        <a href="index.html" class="text-3xl font-bold">Home</a>
+        <a href="services.html" class="text-3xl font-bold">Services</a>
+        <a href="about.html" class="text-3xl font-bold">Biography</a>
+        <a href="blog.html" class="text-3xl font-bold text-dental-600"
+          >Stories</a
+        >
+      </nav>
+    </div>
+
+    <!-- PAGE HERO (Reduced height & Tinted Background) -->
+    <section
+      class="pt-32 pb-12 bg-gradient-to-b from-dental-50 to-[#FAFAFA] border-b border-dental-100"
+    >
+      <div
+        class="max-w-[1300px] mx-auto px-6 lg:px-12 text-center lg:text-left"
+      >
+        <span
+          class="text-dental-600 font-black uppercase tracking-[0.3em] text-[10px] bg-white px-4 py-1.5 rounded-full border border-dental-100 shadow-sm"
+          >Dental Diary</span
+        >
+        <h1
+          class="text-4xl lg:text-5xl font-black text-slate-950 mt-5 leading-tight tracking-tight"
+        >
+          Stories & <span class="text-gradient">Clinical Insights.</span>
+        </h1>
+        <div
+          class="mt-5 flex justify-center lg:justify-start items-center gap-3 text-xs font-bold text-slate-400"
+        >
+          <a href="index.html" class="hover:text-dental-600 transition-colors"
+            >Home</a
+          >
+          <i class="ph-bold ph-caret-right text-[10px]"></i>
+          <span class="text-slate-900">Blog</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAIN BLOG CONTENT -->
+    <section class="section-padding bg-white">
+      <div class="max-w-[1300px] mx-auto px-6 lg:px-12">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          <!-- Blog Post Grid -->
+          <div class="lg:col-span-8 space-y-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <!-- Article 1 -->
+              <article class="group">
+                <div
+                  class="relative aspect-video rounded-[2rem] overflow-hidden mb-5 shadow-lg"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&q=80&w=600"
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    alt="Whitening"
+                  />
+                  <div class="absolute top-4 left-4">
+                    <span
+                      class="px-3 py-1 bg-dental-500 text-white text-[10px] font-black uppercase tracking-widest rounded-full"
+                      >Cosmetic</span
+                    >
+                  </div>
+                </div>
+                <h3
+                  class="text-xl font-black text-slate-950 mb-3 group-hover:text-dental-600 transition-colors"
+                >
+                  Teeth Whitening: What Nobody Tells You
+                </h3>
+                <p class="text-slate-500 text-sm leading-relaxed mb-5">
+                  Don't drink tea right after your session. Learned that the
+                  hard way from a patient (okay, it was me).
+                </p>
+                <div
+                  class="flex items-center justify-between pt-4 border-t border-slate-50"
+                >
+                  <span class="text-[10px] font-bold text-slate-400 uppercase"
+                    >Feb 12, 2026</span
+                  >
+                  <a
+                    href="#"
+                    class="text-xs font-black text-dental-600 flex items-center gap-1"
+                    >Read Story <i class="ph-bold ph-arrow-right"></i
+                  ></a>
+                </div>
+              </article>
+
+              <!-- Article 2 -->
+              <article class="group">
+                <div
+                  class="relative aspect-video rounded-[2rem] overflow-hidden mb-5 shadow-lg"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=600"
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    alt="Implants"
+                  />
+                  <div class="absolute top-4 left-4">
+                    <span
+                      class="px-3 py-1 bg-blue-500 text-white text-[10px] font-black uppercase tracking-widest rounded-full"
+                      >Implants</span
+                    >
+                  </div>
+                </div>
+                <h3
+                  class="text-xl font-black text-slate-950 mb-3 group-hover:text-dental-600 transition-colors"
+                >
+                  Implants vs. Bridges: The Ultimate Showdown
+                </h3>
+                <p class="text-slate-500 text-sm leading-relaxed mb-5">
+                  Think of it as iPhone vs. Android — but for your mouth. Here's
+                  how to choose the right longevity.
+                </p>
+                <div
+                  class="flex items-center justify-between pt-4 border-t border-slate-50"
+                >
+                  <span class="text-[10px] font-bold text-slate-400 uppercase"
+                    >Feb 05, 2026</span
+                  >
+                  <a
+                    href="#"
+                    class="text-xs font-black text-dental-600 flex items-center gap-1"
+                    >Read Story <i class="ph-bold ph-arrow-right"></i
+                  ></a>
+                </div>
+              </article>
+
+              <!-- Article 3 -->
+              <article class="group">
+                <div
+                  class="relative aspect-video rounded-[2rem] overflow-hidden mb-5 shadow-lg"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&q=80&w=600"
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    alt="Kids"
+                  />
+                  <div class="absolute top-4 left-4">
+                    <span
+                      class="px-3 py-1 bg-purple-500 text-white text-[10px] font-black uppercase tracking-widest rounded-full"
+                      >Pediatric</span
+                    >
+                  </div>
+                </div>
+                <h3
+                  class="text-xl font-black text-slate-950 mb-3 group-hover:text-dental-600 transition-colors"
+                >
+                  Tricking Your Kids Into Brushing
+                </h3>
+                <p class="text-slate-500 text-sm leading-relaxed mb-5">
+                  "Trick" is a strong word. Let's say "creatively motivate."
+                  Hint: sticker charts work wonders.
+                </p>
+                <div
+                  class="flex items-center justify-between pt-4 border-t border-slate-50"
+                >
+                  <span class="text-[10px] font-bold text-slate-400 uppercase"
+                    >Jan 28, 2026</span
+                  >
+                  <a
+                    href="#"
+                    class="text-xs font-black text-dental-600 flex items-center gap-1"
+                    >Read Story <i class="ph-bold ph-arrow-right"></i
+                  ></a>
+                </div>
+              </article>
+
+              <!-- Article 4 -->
+              <article class="group">
+                <div
+                  class="relative aspect-video rounded-[2rem] overflow-hidden mb-5 shadow-lg"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1629909615184-74f495363b67?auto=format&fit=crop&q=80&w=600"
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    alt="Tech"
+                  />
+                  <div class="absolute top-4 left-4">
+                    <span
+                      class="px-3 py-1 bg-slate-800 text-white text-[10px] font-black uppercase tracking-widest rounded-full"
+                      >Tech</span
+                    >
+                  </div>
+                </div>
+                <h3
+                  class="text-xl font-black text-slate-950 mb-3 group-hover:text-dental-600 transition-colors"
+                >
+                  Digital Dentistry: The Future is Now
+                </h3>
+                <p class="text-slate-500 text-sm leading-relaxed mb-5">
+                  3D scanning and same-day crowns. Why your grandpa's dentist
+                  was old school.
+                </p>
+                <div
+                  class="flex items-center justify-between pt-4 border-t border-slate-50"
+                >
+                  <span class="text-[10px] font-bold text-slate-400 uppercase"
+                    >Jan 20, 2026</span
+                  >
+                  <a
+                    href="#"
+                    class="text-xs font-black text-dental-600 flex items-center gap-1"
+                    >Read Story <i class="ph-bold ph-arrow-right"></i
+                  ></a>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- Sidebar Widgets -->
+          <aside class="lg:col-span-4 space-y-8">
+            <!-- Categories Widget -->
+            <div
+              class="bg-slate-50 p-8 rounded-[2.5rem] border border-slate-100 shadow-sm"
+            >
+              <h4
+                class="text-lg font-black text-slate-950 mb-6 border-b border-slate-200 pb-3"
+              >
+                Topics
+              </h4>
+              <div class="space-y-3">
+                <a href="#" class="flex justify-between items-center group">
+                  <span
+                    class="text-sm font-bold text-slate-600 group-hover:text-dental-600 transition-colors"
+                    >Cosmetic Design</span
+                  >
+                  <span
+                    class="w-6 h-6 bg-white rounded-lg flex items-center justify-center text-[10px] font-bold text-slate-400"
+                    >12</span
+                  >
+                </a>
+                <a href="#" class="flex justify-between items-center group">
+                  <span
+                    class="text-sm font-bold text-slate-600 group-hover:text-dental-600 transition-colors"
+                    >Preventive Care</span
+                  >
+                  <span
+                    class="w-6 h-6 bg-white rounded-lg flex items-center justify-center text-[10px] font-bold text-slate-400"
+                    >09</span
+                  >
+                </a>
+                <a href="#" class="flex justify-between items-center group">
+                  <span
+                    class="text-sm font-bold text-slate-600 group-hover:text-dental-600 transition-colors"
+                    >Dental Implants</span
+                  >
+                  <span
+                    class="w-6 h-6 bg-white rounded-lg flex items-center justify-center text-[10px] font-bold text-slate-400"
+                    >07</span
+                  >
+                </a>
+              </div>
+            </div>
+
+            <!-- Newsletter Widget -->
+            <div
+              class="bg-slate-950 p-8 rounded-[2.5rem] text-white relative overflow-hidden"
+            >
+              <div
+                class="absolute top-0 right-0 w-32 h-32 bg-dental-600/20 rounded-full -mr-16 -mt-16 blur-2xl"
+              ></div>
+              <div class="relative z-10">
+                <h4 class="text-lg font-black mb-2">The Monthly Floss 🦷</h4>
+                <p class="text-slate-400 text-xs leading-relaxed mb-6">
+                  Expert oral health tips + bad dad jokes delivered to your
+                  inbox.
+                </p>
+                <div class="space-y-3">
+                  <input
+                    type="email"
+                    placeholder="you@example.com"
+                    class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm outline-none focus:border-dental-500 transition-all placeholder:text-slate-600"
+                  />
+                  <button
+                    class="w-full bg-dental-500 hover:bg-dental-400 text-white font-black py-3 rounded-xl transition-all text-sm"
+                  >
+                    Join the Club
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Recent Widget -->
+            <div
+              class="bg-white p-8 rounded-[2.5rem] border border-slate-100 shadow-sm"
+            >
+              <h4 class="text-lg font-black text-slate-950 mb-6">
+                Latest Reads
+              </h4>
+              <div class="space-y-6">
+                <a href="#" class="block group">
+                  <p
+                    class="text-xs font-black text-dental-600 uppercase tracking-widest mb-1"
+                  >
+                    New
+                  </p>
+                  <h5
+                    class="text-sm font-bold text-slate-900 leading-tight group-hover:text-dental-500 transition-colors"
+                  >
+                    10 Dhakaiya Foods Good for Teeth
+                  </h5>
+                </a>
+                <a href="#" class="block group">
+                  <p
+                    class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1"
+                  >
+                    Jan 02
+                  </p>
+                  <h5
+                    class="text-sm font-bold text-slate-900 leading-tight group-hover:text-dental-500 transition-colors"
+                  >
+                    Why Your Gums Bleed (And How to Stop It)
+                  </h5>
+                </a>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER (UNTOUCHED) -->
+    <footer
+      class="bg-black pt-20 pb-10 px-6 lg:px-12 border-t border-slate-800"
+    >
+      <div class="max-w-[1300px] mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
+          <div class="md:col-span-5 space-y-6">
+            <a href="index.html" class="flex items-center gap-3">
+              <div
+                class="w-9 h-9 bg-dental-600 rounded-xl flex items-center justify-center text-white"
+              >
+                <i class="ph ph-tooth-bold text-lg"></i>
+              </div>
+              <span
+                class="font-black text-xl tracking-tighter text-white uppercase"
+              >
+                MunnaDental
+              </span>
+            </a>
+            <p class="text-slate-400 text-base leading-relaxed max-w-xs">
+              Providing premium dental solutions with Japanese clinical
+              excellence in the heart of Dhaka.
+            </p>
+            <div class="flex gap-3">
+              <a
+                href="#"
+                class="w-10 h-10 rounded-full border border-slate-700 flex items-center justify-center text-slate-400 hover:text-white hover:bg-dental-600 transition-all text-lg"
+              >
+                <i class="ph-fill ph-facebook-logo"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 rounded-full border border-slate-700 flex items-center justify-center text-slate-400 hover:text-white hover:bg-dental-600 transition-all text-lg"
+              >
+                <i class="ph-fill ph-instagram-logo"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 rounded-full border border-slate-700 flex items-center justify-center text-slate-400 hover:text-white hover:bg-dental-600 transition-all text-lg"
+              >
+                <i class="ph-fill ph-linkedin-logo"></i>
+              </a>
+            </div>
+          </div>
+          <div class="md:col-span-2 space-y-4">
+            <h4
+              class="font-black text-white uppercase tracking-widest text-[10px]"
+            >
+              Practice
+            </h4>
+            <ul class="space-y-3 text-sm text-slate-400 font-semibold">
+              <li>
+                <a href="services.html" class="hover:text-dental-500"
+                  >Treatments</a
+                >
+              </li>
+              <li>
+                <a href="about.html" class="hover:text-dental-500"
+                  >The Clinic</a
+                >
+              </li>
+              <li>
+                <a href="about.html" class="hover:text-dental-500"
+                  >Our Doctor</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="md:col-span-2 space-y-4">
+            <h4
+              class="font-black text-white uppercase tracking-widest text-[10px]"
+            >
+              Support
+            </h4>
+            <ul class="space-y-3 text-sm text-slate-400 font-semibold">
+              <li>
+                <a href="contact.html" class="hover:text-dental-500"
+                  >Emergency</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-dental-500">Privacy Policy</a>
+              </li>
+              <li>
+                <a href="contact.html" class="hover:text-dental-500">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <div class="md:col-span-3 space-y-4">
+            <h4
+              class="font-black text-white uppercase tracking-widest text-[10px]"
+            >
+              Clinic Hours
+            </h4>
+            <div class="space-y-2 text-sm text-slate-400 font-semibold">
+              <div class="flex justify-between border-b border-slate-800 pb-1">
+                <span>Sat - Thu</span>
+                <span class="text-white">4:00 PM - 10:00 PM</span>
+              </div>
+              <div class="flex justify-between">
+                <span>Friday</span>
+                <span class="text-dental-500">By Appointment</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="pt-10 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4"
+        >
+          <p
+            class="text-slate-500 font-bold text-[10px] uppercase tracking-widest"
+          >
+            &copy; 2026 Dr. Mehedi Rafiq Munna. Excellence in Dentistry.
+          </p>
+          <p class="text-slate-600 text-[9px] uppercase tracking-tighter">
+            Designed for Modern Healthcare Standards
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const navbar = document.getElementById("navbar");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 30) {
+          navbar.classList.add("pt-2");
+          navbar.classList.remove("pt-6");
+        } else {
+          navbar.classList.add("pt-6");
+          navbar.classList.remove("pt-2");
+        }
+      });
+      function toggleMobileMenu() {
+        document
+          .getElementById("mobileMenu")
+          .classList.toggle("translate-x-full");
+      }
+    </script>
+  </body>
+</html>
