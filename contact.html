@@ -80,72 +80,55 @@
     class="bg-[#FAFAFA] text-slate-900 antialiased selection:bg-dental-100 selection:text-dental-900"
   >
     <!-- HEADER / NAV (UNTOUCHED) -->
-    <nav
-      class="fixed top-0 w-full z-50 transition-all duration-500 px-6 lg:px-12 pt-6"
-      id="navbar"
-    >
+    <nav class="fixed top-0 w-full z-50 px-4 sm:px-6 lg:px-12 pt-4" id="navbar">
       <div
-        class="max-w-[1300px] mx-auto glass rounded-[2rem] px-8 py-4 flex justify-between items-center shadow-2xl shadow-slate-200/50"
+        class="max-w-[1300px] mx-auto bg-white rounded-2xl px-4 sm:px-6 py-3 flex justify-between items-center shadow-xl"
       >
-        <a href="index.html" class="flex items-center gap-3 group">
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-2">
           <div
-            class="w-11 h-11 bg-gradient-to-tr from-dental-600 to-dental-400 rounded-2xl flex items-center justify-center text-white shadow-lg group-hover:rotate-6 transition-transform"
+            class="w-10 h-10 bg-gradient-to-tr from-dental-600 to-dental-400 rounded-xl flex items-center justify-center text-white"
           >
-            <i class="ph ph-tooth text-2xl"></i>
+            <i class="ph ph-tooth text-xl"></i>
           </div>
           <div class="leading-none">
-            <span
-              class="block font-extrabold text-xl tracking-tighter text-slate-950"
-              >MunnaDental</span
-            >
-            <span
-              class="text-[10px] uppercase tracking-[0.2em] font-bold text-dental-600"
-              >Premium Care</span
-            >
+            <span class="block font-bold text-lg text-slate-900">
+              MunnaDental
+            </span>
+            <span class="text-[9px] uppercase font-bold text-dental-600">
+              Premium Care
+            </span>
           </div>
         </a>
 
-        <div class="hidden lg:flex items-center gap-9">
-          <a
-            href="index.html"
-            class="text-sm font-semibold text-slate-600 hover:text-dental-600 transition-colors"
-            >Home</a
-          >
-          <a
-            href="about.html"
-            class="text-sm font-semibold text-slate-600 hover:text-dental-600 transition-colors"
-            >About</a
-          >
-          <a
-            href="services.html"
-            class="text-sm font-semibold text-slate-600 hover:text-dental-600 transition-colors"
-            >Treatments</a
-          >
-          <a
-            href="blog.html"
-            class="text-sm font-semibold text-slate-600 hover:text-dental-600 transition-colors"
-            >Stories</a
-          >
+        <!-- Desktop Menu -->
+        <div class="hidden lg:flex items-center gap-8">
+          <a href="index.html" class="text-sm font-semibold">Home</a>
+          <a href="about.html" class="text-sm font-semibold">About</a>
+          <a href="services.html" class="text-sm font-semibold">Treatments</a>
+          <a href="blog.html" class="text-sm font-semibold">Blogs</a>
+          <a href="contact.html" class="text-sm font-semibold">Contact</a>
         </div>
 
-        <div class="hidden lg:flex items-center gap-7">
-          <a
-            href="tel:+8801700000000"
-            class="flex items-center gap-2 text-slate-700 hover:text-dental-600 font-bold text-sm transition-all"
-          >
-            <i class="ph-bold ph-phone text-lg"></i>
-            <span>+880 17XX XXXXXX</span>
+        <!-- Desktop Right Side -->
+        <div class="hidden lg:flex items-center gap-6">
+          <a href="tel:+8801700000000" class="font-semibold text-sm">
+            +880 17XX XXXXXX
           </a>
           <a
             href="contact.html"
-            class="bg-slate-950 hover:bg-dental-600 text-white px-6 py-3 rounded-full text-sm font-bold transition-all transform hover:-translate-y-1 shadow-lg"
+            class="bg-black text-white px-5 py-2 rounded-full text-sm"
           >
             Book Appointment
           </a>
         </div>
 
-        <button class="lg:hidden text-2xl p-2" onclick="toggleMobileMenu()">
-          <i class="ph ph-list-bold"></i>
+        <!-- 🔥 Mobile Hamburger -->
+        <button
+          class="lg:hidden block text-3xl text-slate-900"
+          onclick="toggleMobileMenu()"
+        >
+          <i class="ph ph-list"></i>
         </button>
       </div>
     </nav>
@@ -157,15 +140,46 @@
     >
       <div class="flex justify-between items-center mb-16">
         <span class="font-black text-2xl tracking-tighter">NAVIGATION</span>
-        <button onclick="toggleMobileMenu()" class="text-3xl">
+        <button
+          onclick="
+            document
+              .getElementById('mobileMenu')
+              .classList.toggle('translate-x-full')
+          "
+          class="text-3xl"
+        >
           <i class="ph ph-x"></i>
         </button>
       </div>
       <nav class="flex flex-col gap-8">
-        <a href="index.html" class="text-3xl font-bold">Home</a>
-        <a href="services.html" class="text-3xl font-bold">Services</a>
-        <a href="about.html" class="text-3xl font-bold">Biography</a>
-        <a href="contact.html" class="text-3xl font-bold text-dental-600"
+        <a
+          href="index.html"
+          class="text-3xl font-bold"
+          onclick="toggleMobileMenu()"
+          >Home</a
+        >
+        <a
+          href="about.html"
+          class="text-3xl font-bold"
+          onclick="toggleMobileMenu()"
+          >About</a
+        >
+        <a
+          href="services.html"
+          class="text-3xl font-bold"
+          onclick="toggleMobileMenu()"
+          >Services</a
+        >
+        <a
+          href="blog.html"
+          class="text-3xl font-bold"
+          onclick="toggleMobileMenu()"
+          >Blogs</a
+        >
+        <a
+          href="contact.html"
+          class="text-3xl font-bold text-dental-600"
+          onclick="toggleMobileMenu()"
           >Book Now</a
         >
       </nav>
